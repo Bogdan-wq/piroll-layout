@@ -1,0 +1,118 @@
+body {
+   margin: 0;
+}
+* {
+   font-family:'Montserrat',sans-serif;
+}
+
+
+
+
+
+
+
+/*Personal-info*/
+#personal-info {
+   background-image: url(../images/about/tmb_42872_4926.jpg);
+   background-position: center;
+   background-size:cover;
+   background-repeat: no-repeat;
+   box-sizing:border-box;
+   color:white;
+   text-align: center;
+}
+#personal-info-crutch {
+   background-color:rgba(0,0,0,.3);
+   padding:115px 0;
+}
+#personal-info-name {
+   font-size:38px;
+   display:block;
+   margin-bottom: 2.5rem;
+}
+#personal-info-paragraph {
+   font-family:'Nunito Sans',sans-serif;
+   font-size:18px;
+   width:45%;
+   margin:0 auto;
+   line-height:28px;
+}
+nav .menu-item:nth-child(2){
+   color:#10c9c3;
+}
+
+
+
+
+
+
+
+
+
+
+/*About me*/
+#about-me {
+   padding:140px 0;
+   background-color: rgb(245,245,245);
+}
+#flex-end {
+   display:flex;
+   justify-content: flex-end;
+}
+#about-me-short {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   width:50%;
+}
+#about-me-header {
+   font-size:30px;
+   font-weight: 500;
+   margin: 0 0 2rem 0;
+}
+.about-me-paragraphs {
+   font-family: 'Nunito-Sans',sans-serif;
+   line-height: 1.5;
+   margin:0 0 2rem 0;
+   width:75%;
+}
+
+
+
+
+
+
+/*Need a project?*/
+#need-a-project {
+   padding:95px 0;
+   text-align: center;
+}
+#need-a-project-header {
+   font-size:30px;
+   font-weight: 500;
+   margin:0 0 2.5rem 0;
+}
+#need-a-project-paragraph {
+   margin: 0 auto 2.5rem auto;
+   font-family: 'Nunito-Sans',sans-serif;
+   width:42%;
+   line-height: 1.5;
+}
+#need-a-project-button {
+   padding:1.25rem 2rem;
+   text-transform: uppercase;
+   border:none;
+   background-color:#10c9c3;
+   cursor: pointer;
+   color:white;
+   letter-spacing: 2px;
+}
+
+
+
+
+
+
+
+
+

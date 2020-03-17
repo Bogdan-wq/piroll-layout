@@ -1,0 +1,108 @@
+body {
+   font-family: 'Montserrat',sans-serif;
+   padding: 0;
+   margin: 0;
+}
+nav .menu-item:last-child {
+   color:#10c9c3;
+}
+h1,h2,h3,h4,h5,h6,p {
+   margin:0;
+}
+
+
+
+/*Contact info, Google map*/
+#contact {
+   display: flex;
+   justify-content: space-between;
+}
+#contact-info-google-map {
+   background-color:rgb(245,245,245);
+   padding:100px 0;
+}
+#contact-form {
+   width:58%;
+}
+#contact-intro {
+   width:33%;
+}
+#contact-intro-header {
+   font-weight: 500;
+   font-size:30px;
+   margin-bottom: 2.5rem;
+}
+#contact-intro-paragraph {
+   font-family: 'Nunito-Sans',sans-serif;
+   line-height: 1.5;
+   margin-bottom: 2rem;
+}
+#contact-info-example {
+   display: flex;
+   flex-direction: column;
+   font-family: 'Nunito-Sans',sans-serif;
+}
+#contact-info-example address {
+   font-style: normal;
+   margin-top: 0;
+}
+.contact-info-details {
+   margin-top: 1.5rem;
+}
+input {
+   border:none;
+   font-family: 'Nunito-Sans',sans-serif;
+   font-size:15px;
+   box-sizing: border-box;
+   padding-left:22px;
+}
+#form-inputs-row {
+   display:flex;
+   flex-direction: row;
+   justify-content: space-between;
+   margin-bottom:30px;
+}
+.form-input-row {
+   width:325px;
+   height:50px;
+}
+.form-input-whole {
+   width:100%;
+   height:50px;
+   margin-bottom:30px;
+}
+#big {
+   display:block;
+   background-color: white;
+   height:10.5rem;
+   font-family: 'Nunito-Sans',sans-serif;
+   font-size:15px;
+   resize:none;
+   padding-left:22px;
+   padding-top:20px;
+   border:none;
+   box-sizing: border-box;
+}
+.main-button {
+   padding:1.25rem 2rem;
+   text-transform: uppercase;
+   border:none;
+   background-color:#10c9c3;
+   cursor: pointer;
+   color:white;
+}
+
+
+
+
+
+
+
+
+/*Google-Map*/
+#google-map-container {
+   padding:100px 0 0 0;
+}
+#google-map {
+   height:470px;
+}
