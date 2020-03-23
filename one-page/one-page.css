@@ -1,5 +1,7 @@
-body {
+html,body {
    margin: 0;
+   padding:0;
+   width:100%;
    overflow-x: hidden;
 }
 * {
@@ -10,6 +12,7 @@ body {
    background-image: url(../images/backgrounds/cveta-cvetnaya-tekstura-fon-background.jpg);
    background-position:right;
    background-repeat: no-repeat;
+   background-size:cover;
    overflow:auto;
 }
 
@@ -328,6 +331,7 @@ input {
    border:none;
    box-sizing: border-box;
 }
+
 
 
 

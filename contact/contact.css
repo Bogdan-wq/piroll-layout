@@ -1,7 +1,11 @@
-body {
-   font-family: 'Montserrat',sans-serif;
-   padding: 0;
+html,body {
    margin: 0;
+   padding:0;
+   width:100%;
+   overflow-x:hidden;
+}
+* {
+   font-family:'Montserrat',sans-serif;
 }
 nav .menu-item:last-child {
    color:#10c9c3;
