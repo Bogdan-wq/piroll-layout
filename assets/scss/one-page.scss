@@ -1,0 +1,379 @@
+@import "common";
+@import "nav";
+@import "achivements";
+@import "footer";
+@import "works";
+@import "form";
+
+
+
+
+@mixin stat($width) {
+    content: "";
+    display: block;
+    position: absolute;
+    top:0;
+    left:0;
+    height:100%;
+    background-color:$main-color;
+    width:$width
+}
+
+
+
+//Header
+.header {
+    height:75vh;
+    @include background(left,url("../images/backgrounds/1.jpg"));
+
+    &__inner {
+        height:75vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+
+    &__intro  {
+        flex-grow: 1;
+        display: flex;
+        justify-content: flex-end;
+
+        &__content {
+            flex-basis: 45%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+        &__title {
+            font-size:38px;
+            margin-bottom: 30px;
+        }
+
+        &__text {
+            font-size: 18px;
+            font-family: $Nunito;
+            line-height: 28px;
+            margin-bottom: 40px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//About us
+.about-us {
+    padding:100px 0;
+
+    &__inner {
+        text-align: center;
+
+        &__title {
+            margin-bottom: 35px;
+        }
+
+        &__text {
+            max-width: 635px;
+            margin: 0 auto;
+        }
+
+        &__sign {
+            margin-top:25px;
+        }
+    }
+}
+
+
+
+
+//Skills
+
+.skills {
+    padding:160px 0;
+    @include background(right top,url("../images/backgrounds/2.jpg"));
+
+    &__inner {
+        width:35%;
+
+        &__title {
+            font-size:25px;
+        }
+
+        &__block {
+            margin-top: 35px;
+        }
+
+
+        &__issue:not(:first-child) {
+            margin-top:30px;
+        }
+        &__label {
+            font-size:12px;
+            font-weight: 600;
+            display: inline-block;
+            text-transform: uppercase;
+            &:nth-child(2n) {
+                margin-left:20px;
+            }
+        }
+
+        &__stat {
+            width:100%;
+            height:3px;
+            background-color:$secondary-gray;
+            margin-top:10px;
+            position: relative;
+            &_design::before {
+                @include stat(75%);
+            }
+            &_development::before {
+                @include stat(90%);
+            }
+            &_marketing::before {
+                @include stat(65%);
+            }
+        }
+
+    }
+}
+
+
+
+
+
+.load-more {
+    background-color: $secondary-gray;
+    padding:45px 0;
+
+    &__inner {
+        display: flex;
+        justify-content: center;
+        text-transform: uppercase;
+        font-size:12px;
+
+        a {
+            color:$load-more-text;
+            font-weight: 600;
+        }
+    }
+}
+
+
+
+
+
+
+//Work
+.work-process {
+    padding:100px 0;
+
+
+    &__inner {
+        text-align: center;
+
+        &__text {
+            margin:25px auto 0;
+            max-width:635px ;
+        }
+
+        &__video {
+            max-width: 1000px;
+            width:80%;
+            padding-top:50%;
+            margin:55px auto 0;
+            background-color:$secondary-gray;
+            position: relative;
+        }
+
+        &__playicon {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            z-index:1;
+        }
+    }
+}
+
+
+
+
+//Services
+
+.services {
+    padding:100px 0;
+    background-color:$secondary-gray-light;
+
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+
+        &__issue {
+            flex-basis: 25%;
+            text-align: center;
+            &:nth-last-child(-n+4) {
+                margin-top:60px;
+            }
+        }
+
+        &__title {
+            text-transform: uppercase;
+            font-size:12px;
+            margin-top:20px;
+        }
+
+        &__text {
+            color:#787878;
+            font-size:16px;
+            font-family: $Nunito;
+            padding:0 35px;
+            margin-top:25px;
+        }
+    }
+}
+
+
+.reviews {
+    background-color:$main-color;
+    padding:100px 0;
+}
+
+
+//Slider
+.slider {
+    &__item {
+        color: white;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+
+        &__text {
+            font-size: 24px;
+            max-width: 840px;
+            width: 100%;
+            margin: 0 auto;
+            line-height: 36px;
+        }
+
+        &__author {
+            margin-top: 35px;
+            display: inline-block;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+    }
+}
+
+
+//Slider-dots
+.slick-dots {
+    margin-top:75px;
+    display: flex;
+    justify-content: center;
+
+    li {
+        list-style: none;
+        margin-left:10px;
+
+        :first-child {
+            margin-left:0;
+        }
+        button {
+            font-size:0;
+            width:15px;
+            height:15px;
+            border-radius: 50%;
+            cursor:pointer;
+            opacity:0.5;
+        }
+        &.slick-active button {
+            opacity: 1;
+        }
+    }
+}
+
+
+
+
+
+
+//Firms
+
+.firms {
+    padding:70px 0;
+
+    &__inner {
+        display: flex;
+
+        &__issue {
+            flex-basis: 20%;
+            position: relative;
+            padding-top:6%;
+        }
+
+        &__image {
+            position: absolute;
+            width:100%;
+            height:100%;
+            object-fit: contain;
+            top:0;
+            left:0;
+            z-index:1;
+        }
+    }
+}
+
+
+
+
+
+
+
+//Need a project?
+
+.need-a-project {
+    padding:100px 0;
+    background-color: $secondary-gray-light;
+
+
+    &__inner {
+        width:80%;
+        max-width:660px;
+        margin: 0 auto;
+        text-align: center;
+
+        &__title {
+            margin-bottom:40px;
+        }
+
+        &__text {
+            margin-top: 40px;
+        }
+
+        &__form {
+            margin-top:2.5rem;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+

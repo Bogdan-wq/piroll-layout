@@ -1,0 +1,45 @@
+@import "common";
+@import "nav";
+@import "footer";
+@import "example";
+@import "form";
+
+
+
+.contact {
+  padding:100px 0;
+  background-color: $secondary-gray-light;
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__content,&__form {
+      flex-basis:50%;
+    }
+
+    &__content {
+      padding-right: 120px;
+    }
+
+    &__title {
+      margin-bottom: 30px;
+    }
+
+    &__text {
+      margin-bottom: 40px;
+    }
+
+    &__google-map {
+      flex-basis:100%;
+      height:70vh;
+      margin-top:40px;
+    }
+  }
+}
+
+
+
+
+
+

@@ -1,0 +1,32 @@
+.achievements {
+  padding:100px 0;
+  background-color:$main-color;
+
+
+  &__inner {
+    display:flex;
+
+    &__issue {
+      flex-basis: 25%;
+      display: flex;
+      justify-content: center;
+    }
+
+    &__multiply-labeles {
+      display: flex;
+      flex-direction: column;
+      margin-left:20px;
+    }
+
+    &__label {
+      color:white;
+      text-transform: uppercase;
+      &_number {
+        font-weight: 500;
+      }
+      &:nth-child(2n) {
+        margin-top: 2px;
+      }
+    }
+  }
+}

@@ -1,0 +1,248 @@
+body, html {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+
+h1, h2, h3, h4, h5, h6, p, div {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+button, input, textarea {
+  outline: 0;
+  offset: 0;
+  border: none;
+}
+
+textarea {
+  display: block;
+  resize: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 25px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 25px;
+}
+
+.title__notbold {
+  font-weight: 500;
+}
+
+.content {
+  font-family: "Nunito Sans";
+  line-height: 24px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.button {
+  background-color: #10c9c3;
+  padding: 20px 35px;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+}
+
+.top {
+  padding: 35px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+.nav__item {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-left: 2rem;
+  cursor: pointer;
+}
+.nav__item:hover {
+  color: #10c9c3;
+}
+
+.achievements {
+  padding: 100px 0;
+  background-color: #10c9c3;
+}
+.achievements__inner {
+  display: flex;
+}
+.achievements__inner__issue {
+  flex-basis: 25%;
+  display: flex;
+  justify-content: center;
+}
+.achievements__inner__multiply-labeles {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+.achievements__inner__label {
+  color: white;
+  text-transform: uppercase;
+}
+.achievements__inner__label_number {
+  font-weight: 500;
+}
+.achievements__inner__label:nth-child(2n) {
+  margin-top: 2px;
+}
+
+.footer {
+  padding: 100px 0;
+  background-color: black;
+}
+.footer__inner {
+  display: flex;
+  color: white;
+}
+.footer__inner__info {
+  display: flex;
+  flex-direction: column;
+}
+.footer__inner__info:not(:last-child) {
+  flex-grow: 1;
+}
+.footer__inner__info:nth-child(2) {
+  flex-grow: 5;
+}
+.footer__inner__info:nth-child(4) {
+  flex-grow: 4;
+}
+.footer__inner__design {
+  font-weight: 600;
+  font-size: 18px;
+}
+.footer__inner__rights {
+  margin-top: 35px;
+  font-family: "Nunito Sans";
+}
+.footer__inner__email, .footer__inner__tel {
+  font-style: normal;
+  font-family: "Nunito Sans";
+}
+.footer__inner__tel {
+  margin-top: 15px;
+}
+.footer__inner__nav__item {
+  color: white;
+  font-family: "Nunito Sans";
+}
+.footer__inner__nav__item:not(:first-child) {
+  margin-top: 7px;
+}
+
+.myself {
+  padding: 120px 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../images/backgrounds/4.jpg");
+  position: relative;
+}
+.myself::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: rgba(47, 47, 47, 0.5);
+}
+.myself__inner {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+}
+.myself__inner__title {
+  font-size: 38px;
+  font-weight: 400;
+}
+.myself__inner__content {
+  margin-top: 20px;
+  max-width: 570px;
+}
+
+.about {
+  padding: 100px 0;
+  position: relative;
+}
+.about__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  bottom: 0;
+  z-index: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-image: url("../images/backgrounds/3.jpg");
+}
+.about__inner {
+  display: flex;
+  justify-content: flex-end;
+}
+.about__inner__content {
+  flex-basis: 50%;
+  padding-left: 85px;
+}
+.about__inner__title {
+  font-weight: 500;
+}
+.about__inner__text {
+  margin-top: 45px;
+}
+.about__inner__text p {
+  font-family: "Nunito Sans";
+  line-height: 24px;
+}
+.about__inner__text p:nth-child(2) {
+  margin-top: 25px;
+}
+.about__inner__image {
+  margin-top: 35px;
+}
+
+.need-a-project {
+  padding: 100px 0;
+}
+.need-a-project__inner {
+  text-align: center;
+}
+.need-a-project__inner__title {
+  font-weight: 500;
+  margin-bottom: 35px;
+}
+.need-a-project__inner__text {
+  max-width: 550px;
+  margin-bottom: 50px;
+}
+
+/*# sourceMappingURL=about.css.map */

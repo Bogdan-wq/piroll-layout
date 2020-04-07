@@ -1,0 +1,67 @@
+@import "common";
+@import "nav";
+@import "footer";
+@import "example";
+
+
+.project-single {
+  padding:100px 0;
+  background-color: $secondary-gray-light;
+  position: relative;
+
+  &__background {
+    position:absolute;
+    z-index:0;
+    right:0;
+    top:0;
+    bottom:0;
+    width:50%;
+    @include background(center,url("../images/backgrounds/5.jpg"))
+  }
+
+  &__inner {
+    width:50%;
+    &__text {
+      margin-top:20px;
+    }
+    &__paragraph {
+      font-family: $Nunito;
+      padding-right:100px;
+      &:nth-child(2) {
+        margin-top:20px;
+      }
+    }
+    &__example {
+      margin-top:55px;
+    }
+  }
+}
+
+
+
+.togglers {
+  padding:50px 0;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__label {
+    text-transform: uppercase;
+    font-family: $Nunito;
+    font-size:12px;
+
+    &_left {
+      margin-left:10px;
+    }
+    &_right {
+      margin-right:10px;
+    }
+  }
+}

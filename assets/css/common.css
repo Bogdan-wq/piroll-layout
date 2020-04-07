@@ -1,0 +1,65 @@
+body, html {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+
+h1, h2, h3, h4, h5, h6, p, div {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+button, input, textarea {
+  outline: 0;
+  offset: 0;
+  border: none;
+}
+
+textarea {
+  display: block;
+  resize: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 25px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 25px;
+}
+
+.title__notbold {
+  font-weight: 500;
+}
+
+.content {
+  font-family: "Nunito Sans";
+  line-height: 24px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.button {
+  background-color: #10c9c3;
+  padding: 20px 35px;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=common.css.map */

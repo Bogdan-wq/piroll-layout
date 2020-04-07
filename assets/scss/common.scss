@@ -1,0 +1,76 @@
+$main-color:#10c9c3;
+$secondary-gray:#d8d8d8;
+$secondary-gray-light:#f5f5f5;
+$load-more-text:#8e8e8e;
+$hover-black:rgba(0,0,0,0.6);
+$Montserrat:'Montserrat';
+$Nunito:'Nunito Sans';
+
+
+
+body,html {
+  padding:0;
+  margin:0;
+  width:100vw;
+  overflow-x: hidden;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-family: $Montserrat;
+}
+
+h1,h2,h3,h4,h5,h6,p,div {
+  margin:0;
+}
+a {
+  text-decoration: none;
+  color:black;
+}
+button,input,textarea {
+  outline: 0;
+  offset: 0;
+  border:none;
+}
+
+textarea {
+  display: block;
+  resize: none;
+}
+
+.container {
+  width:100%;
+  max-width: 1200px;
+  padding:0 25px;
+  margin:0 auto;
+}
+
+
+.title {
+  font-size:25px;
+}
+.title__notbold {
+  font-weight: 500;
+}
+.content {
+  font-family: $Nunito;
+  line-height: 24px;
+  width:100%;
+  margin: 0 auto;
+}
+.button {
+  background-color:$main-color;
+  padding: 20px 35px;
+  text-transform: uppercase;
+  color:white;
+  cursor: pointer;
+}
+
+@mixin background($position,$image) {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position:$position;
+  background-image: $image;
+}

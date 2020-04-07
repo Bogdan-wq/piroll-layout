@@ -1,0 +1,515 @@
+body, html {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+
+h1, h2, h3, h4, h5, h6, p, div {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+button, input, textarea {
+  outline: 0;
+  offset: 0;
+  border: none;
+}
+
+textarea {
+  display: block;
+  resize: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 25px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 25px;
+}
+
+.title__notbold {
+  font-weight: 500;
+}
+
+.content {
+  font-family: "Nunito Sans";
+  line-height: 24px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.button {
+  background-color: #10c9c3;
+  padding: 20px 35px;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+}
+
+.top {
+  padding: 35px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+.nav__item {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-left: 2rem;
+  cursor: pointer;
+}
+.nav__item:hover {
+  color: #10c9c3;
+}
+
+.achievements {
+  padding: 100px 0;
+  background-color: #10c9c3;
+}
+.achievements__inner {
+  display: flex;
+}
+.achievements__inner__issue {
+  flex-basis: 25%;
+  display: flex;
+  justify-content: center;
+}
+.achievements__inner__multiply-labeles {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+.achievements__inner__label {
+  color: white;
+  text-transform: uppercase;
+}
+.achievements__inner__label_number {
+  font-weight: 500;
+}
+.achievements__inner__label:nth-child(2n) {
+  margin-top: 2px;
+}
+
+.footer {
+  padding: 100px 0;
+  background-color: black;
+}
+.footer__inner {
+  display: flex;
+  color: white;
+}
+.footer__inner__info {
+  display: flex;
+  flex-direction: column;
+}
+.footer__inner__info:not(:last-child) {
+  flex-grow: 1;
+}
+.footer__inner__info:nth-child(2) {
+  flex-grow: 5;
+}
+.footer__inner__info:nth-child(4) {
+  flex-grow: 4;
+}
+.footer__inner__design {
+  font-weight: 600;
+  font-size: 18px;
+}
+.footer__inner__rights {
+  margin-top: 35px;
+  font-family: "Nunito Sans";
+}
+.footer__inner__email, .footer__inner__tel {
+  font-style: normal;
+  font-family: "Nunito Sans";
+}
+.footer__inner__tel {
+  margin-top: 15px;
+}
+.footer__inner__nav__item {
+  color: white;
+  font-family: "Nunito Sans";
+}
+.footer__inner__nav__item:not(:first-child) {
+  margin-top: 7px;
+}
+
+.works {
+  display: flex;
+  flex-wrap: wrap;
+}
+.works__issue {
+  flex-basis: 25%;
+  position: relative;
+  padding: 25% 0 0 0;
+}
+.works__issue:hover .works__issue__outer {
+  visibility: visible;
+  opacity: 1;
+}
+.works__issue__outer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  transition: all 0.2s;
+}
+.works__issue__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+}
+.form__block {
+  flex-grow: 1;
+  margin-top: 2rem;
+  height: 50px;
+}
+.form__block:first-child {
+  margin-right: 35px;
+}
+.form__block:nth-child(-n+2) {
+  margin-top: 0;
+}
+.form__block:nth-last-child(2) {
+  height: 180px;
+  flex-basis: 100%;
+}
+.form__block:nth-last-child(2) .form__input {
+  padding-top: 20px;
+}
+.form__block:nth-child(3) {
+  flex-basis: 100%;
+}
+.form__input {
+  padding: 0 0 0 25px;
+  width: 100%;
+  height: 100%;
+  font-family: "Nunito Sans";
+  font-size: 15px;
+}
+.form__input:focus {
+  outline: 2px solid #d8d8d8;
+}
+.form__input ::-webkit-input-placeholder {
+  font-family: "Nunito Sans";
+  font-size: 15px;
+}
+
+.header {
+  height: 75vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-image: url("../images/backgrounds/1.jpg");
+}
+.header__inner {
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+}
+.header__intro {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+.header__intro__content {
+  flex-basis: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.header__intro__title {
+  font-size: 38px;
+  margin-bottom: 30px;
+}
+.header__intro__text {
+  font-size: 18px;
+  font-family: "Nunito Sans";
+  line-height: 28px;
+  margin-bottom: 40px;
+}
+
+.about-us {
+  padding: 100px 0;
+}
+.about-us__inner {
+  text-align: center;
+}
+.about-us__inner__title {
+  margin-bottom: 35px;
+}
+.about-us__inner__text {
+  max-width: 635px;
+  margin: 0 auto;
+}
+.about-us__inner__sign {
+  margin-top: 25px;
+}
+
+.skills {
+  padding: 160px 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-image: url("../images/backgrounds/2.jpg");
+}
+.skills__inner {
+  width: 35%;
+}
+.skills__inner__title {
+  font-size: 25px;
+}
+.skills__inner__block {
+  margin-top: 35px;
+}
+.skills__inner__issue:not(:first-child) {
+  margin-top: 30px;
+}
+.skills__inner__label {
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+  text-transform: uppercase;
+}
+.skills__inner__label:nth-child(2n) {
+  margin-left: 20px;
+}
+.skills__inner__stat {
+  width: 100%;
+  height: 3px;
+  background-color: #d8d8d8;
+  margin-top: 10px;
+  position: relative;
+}
+.skills__inner__stat_design::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #10c9c3;
+  width: 75%;
+}
+.skills__inner__stat_development::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #10c9c3;
+  width: 90%;
+}
+.skills__inner__stat_marketing::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #10c9c3;
+  width: 65%;
+}
+
+.load-more {
+  background-color: #d8d8d8;
+  padding: 45px 0;
+}
+.load-more__inner {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.load-more__inner a {
+  color: #8e8e8e;
+  font-weight: 600;
+}
+
+.work-process {
+  padding: 100px 0;
+}
+.work-process__inner {
+  text-align: center;
+}
+.work-process__inner__text {
+  margin: 25px auto 0;
+  max-width: 635px;
+}
+.work-process__inner__video {
+  max-width: 1000px;
+  width: 80%;
+  padding-top: 50%;
+  margin: 55px auto 0;
+  background-color: #d8d8d8;
+  position: relative;
+}
+.work-process__inner__playicon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.services {
+  padding: 100px 0;
+  background-color: #f5f5f5;
+}
+.services__inner {
+  display: flex;
+  flex-wrap: wrap;
+}
+.services__inner__issue {
+  flex-basis: 25%;
+  text-align: center;
+}
+.services__inner__issue:nth-last-child(-n+4) {
+  margin-top: 60px;
+}
+.services__inner__title {
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-top: 20px;
+}
+.services__inner__text {
+  color: #787878;
+  font-size: 16px;
+  font-family: "Nunito Sans";
+  padding: 0 35px;
+  margin-top: 25px;
+}
+
+.reviews {
+  background-color: #10c9c3;
+  padding: 100px 0;
+}
+
+.slider__item {
+  color: white;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+}
+.slider__item__text {
+  font-size: 24px;
+  max-width: 840px;
+  width: 100%;
+  margin: 0 auto;
+  line-height: 36px;
+}
+.slider__item__author {
+  margin-top: 35px;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.slick-dots {
+  margin-top: 75px;
+  display: flex;
+  justify-content: center;
+}
+.slick-dots li {
+  list-style: none;
+  margin-left: 10px;
+}
+.slick-dots li :first-child {
+  margin-left: 0;
+}
+.slick-dots li button {
+  font-size: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0.5;
+}
+.slick-dots li.slick-active button {
+  opacity: 1;
+}
+
+.firms {
+  padding: 70px 0;
+}
+.firms__inner {
+  display: flex;
+}
+.firms__inner__issue {
+  flex-basis: 20%;
+  position: relative;
+  padding-top: 6%;
+}
+.firms__inner__image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.need-a-project {
+  padding: 100px 0;
+  background-color: #f5f5f5;
+}
+.need-a-project__inner {
+  width: 80%;
+  max-width: 660px;
+  margin: 0 auto;
+  text-align: center;
+}
+.need-a-project__inner__title {
+  margin-bottom: 40px;
+}
+.need-a-project__inner__text {
+  margin-top: 40px;
+}
+.need-a-project__inner__form {
+  margin-top: 2.5rem;
+}
+
+/*# sourceMappingURL=one-page.css.map */

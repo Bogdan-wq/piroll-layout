@@ -1,0 +1,110 @@
+@import "common";
+@import "nav";
+@import "achivements";
+@import "footer";
+
+.myself {
+    padding:120px 0;
+    @include background(center,url("../images/backgrounds/4.jpg"));
+    position: relative;
+
+    &::before {
+        content:'';
+        position: absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        z-index:1;
+        background-color: rgba(47,47,47,.5);
+    }
+
+    &__inner {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        color:white;
+
+        &__title {
+            font-size:38px;
+            font-weight: 400;
+        }
+
+        &__content {
+            margin-top: 20px;
+            max-width: 570px;
+        }
+    }
+}
+
+
+
+.about {
+    padding:100px 0;
+    position: relative;
+
+    &__background {
+        position: absolute;
+        top:0;
+        left:0;
+        width:50%;
+        bottom:0;
+        z-index:0;
+
+        @include  background(left,url("../images/backgrounds/3.jpg"))
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: flex-end;
+
+
+        &__content {
+            flex-basis:50%;
+            padding-left: 85px;
+        }
+
+
+        &__title {
+            font-weight: 500;
+        }
+
+        &__text {
+            margin-top:45px;
+            p {
+                font-family: $Nunito;
+                line-height: 24px;
+                &:nth-child(2) {
+                    margin-top:25px;
+                }
+            }
+
+        }
+
+        &__image {
+            margin-top:35px;
+        }
+    }
+}
+
+
+.need-a-project {
+    padding:100px 0;
+
+    &__inner {
+        text-align: center;
+
+        &__title {
+            font-weight: 500;
+            margin-bottom: 35px;
+        }
+
+        &__text {
+            max-width: 550px;
+            margin-bottom: 50px;
+        }
+    }
+}
+
+
+

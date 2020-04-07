@@ -1,0 +1,19 @@
+.example {
+  &__point {
+    font-family: $Nunito;
+    &:not(:first-child) {
+      margin-top:18px;
+    }
+  }
+
+  &__label {
+    font-family: inherit;
+    font-weight: 800;
+  }
+
+  &__value {
+    font-family: inherit;
+    display: inline-block;
+    margin-left:10px;
+  }
+}
