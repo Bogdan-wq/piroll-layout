@@ -6,6 +6,14 @@
     flex-basis: 25%;
     position: relative;
     padding:25% 0 0 0;
+    @media screen and (max-width:750px) {
+      flex-basis: 50%;
+      padding:50% 0 0 0;
+    }
+    @media screen and (max-width:425px) {
+      flex-basis: 100%;
+      padding:100% 0 0 0;
+    }
     &:hover  &__outer {
       visibility: visible;
       opacity:1;

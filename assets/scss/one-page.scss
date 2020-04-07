@@ -39,17 +39,35 @@
         display: flex;
         justify-content: flex-end;
 
+        @media screen and (max-width: 800px) {
+            justify-content: center;
+        }
+
+
         &__content {
             flex-basis: 45%;
             display: flex;
             justify-content: center;
             align-items: flex-start;
             flex-direction: column;
+
+            @media screen and (max-width: 800px) {
+                flex-basis: 70%;
+                align-items: center;
+            }
+
+            @media screen and (max-width: 600px) {
+                flex-basis: 95%;
+            }
         }
 
         &__title {
             font-size:38px;
             margin-bottom: 30px;
+            @media screen and (max-width: 800px) {
+                text-align: center;
+                font-size:30px;
+            }
         }
 
         &__text {
@@ -57,7 +75,13 @@
             font-family: $Nunito;
             line-height: 28px;
             margin-bottom: 40px;
+
+            @media screen and (max-width: 800px) {
+                text-align: center;
+            }
         }
+
+
     }
 }
 
@@ -105,8 +129,30 @@
     padding:160px 0;
     @include background(right top,url("../images/backgrounds/2.jpg"));
 
+    @media screen and (max-width: 900px) {
+        @include background(center,url("../images/backgrounds/media.jpg"));
+    }
+
+    @media screen and (max-width: 600px) {
+        padding:100px 0;
+    }
+
+    @media screen and (max-width: 400px) {
+        padding:70px 0;
+    }
+
     &__inner {
         width:35%;
+
+        @media screen and (max-width: 900px) {
+            width:50%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 600px) {
+            width:60%;
+        }
 
         &__title {
             font-size:25px;
@@ -144,6 +190,10 @@
             }
             &_marketing::before {
                 @include stat(65%);
+            }
+
+            @media screen and (max-width: 900px) {
+                background-color:darken($secondary-gray,20%);
             }
         }
 
@@ -196,6 +246,10 @@
             margin:55px auto 0;
             background-color:$secondary-gray;
             position: relative;
+            @media screen and (max-width:550px) {
+                width:100%;
+                padding-top:75%;
+            }
         }
 
         &__playicon {
@@ -227,6 +281,18 @@
             &:nth-last-child(-n+4) {
                 margin-top:60px;
             }
+            @media screen and (max-width:900px) {
+                flex-basis: 50%;
+                &:nth-last-child(-n+4),&:nth-child(3),&:nth-child(4) {
+                    margin-top:40px;
+                }
+            }
+            @media screen and (max-width:550px) {
+                flex-basis:100%;
+                &:nth-child(2) {
+                    margin-top:40px;
+                }
+            }
         }
 
         &__title {
@@ -241,6 +307,9 @@
             font-family: $Nunito;
             padding:0 35px;
             margin-top:25px;
+            @media screen and (max-width:900px) {
+                padding:0 15px;
+            }
         }
     }
 }
@@ -317,11 +386,29 @@
 
     &__inner {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        @media screen and (max-width:450px) {
+            justify-content: space-around;
+        }
 
         &__issue {
             flex-basis: 20%;
             position: relative;
             padding-top:6%;
+            @media screen and (max-width:800px) {
+                flex-basis: 30%;
+                padding-top:10%;
+                &:nth-last-child(-n+2) {
+                    margin-top: 20px;
+                }
+            }
+            @media screen and (max-width:600px) {
+                padding-top:15%;
+            }
+            @media screen and (max-width:450px) {
+                padding-top:20%;
+            }
         }
 
         &__image {

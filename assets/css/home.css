@@ -71,6 +71,18 @@ textarea {
   position: relative;
   padding: 25% 0 0 0;
 }
+@media screen and (max-width: 750px) {
+  .works__issue {
+    flex-basis: 50%;
+    padding: 50% 0 0 0;
+  }
+}
+@media screen and (max-width: 425px) {
+  .works__issue {
+    flex-basis: 100%;
+    padding: 100% 0 0 0;
+  }
+}
 .works__issue:hover .works__issue__outer {
   visibility: visible;
   opacity: 1;

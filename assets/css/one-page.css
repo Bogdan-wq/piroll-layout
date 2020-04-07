@@ -88,18 +88,67 @@ textarea {
   padding: 100px 0;
   background-color: #10c9c3;
 }
+@media screen and (max-width: 900px) {
+  .achievements {
+    padding: 50px 0;
+  }
+}
 .achievements__inner {
   display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 900px) {
+  .achievements__inner {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 500px) {
+  .achievements__inner {
+    flex-direction: column;
+  }
 }
 .achievements__inner__issue {
   flex-basis: 25%;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 900px) {
+  .achievements__inner__issue {
+    flex-basis: 50%;
+    margin-top: 15px;
+  }
+  .achievements__inner__issue:nth-child(odd) {
+    justify-content: flex-end;
+    padding-right: 20px;
+  }
+  .achievements__inner__issue:nth-child(even) {
+    padding-left: 20px;
+    justify-content: flex-start;
+  }
+}
+@media screen and (max-width: 500px) {
+  .achievements__inner__issue:not(:first-child) {
+    margin-top: 40px;
+  }
+  .achievements__inner__issue:nth-child(odd) {
+    justify-content: flex-start;
+    padding-right: 0px;
+  }
+  .achievements__inner__issue:nth-child(even) {
+    padding-left: 0px;
+    justify-content: flex-start;
+  }
+}
+.achievements__inner__image {
+  width: 40px;
+  height: 36px;
+  margin-left: 0;
 }
 .achievements__inner__multiply-labeles {
   display: flex;
   flex-direction: column;
-  margin-left: 20px;
+  padding-left: 20px;
 }
 .achievements__inner__label {
   color: white;
@@ -110,6 +159,11 @@ textarea {
 }
 .achievements__inner__label:nth-child(2n) {
   margin-top: 2px;
+}
+@media screen and (max-width: 1100px) {
+  .achievements__inner__label:nth-child(2n) {
+    font-size: 13px;
+  }
 }
 
 .footer {
@@ -164,6 +218,18 @@ textarea {
   flex-basis: 25%;
   position: relative;
   padding: 25% 0 0 0;
+}
+@media screen and (max-width: 750px) {
+  .works__issue {
+    flex-basis: 50%;
+    padding: 50% 0 0 0;
+  }
+}
+@media screen and (max-width: 425px) {
+  .works__issue {
+    flex-basis: 100%;
+    padding: 100% 0 0 0;
+  }
 }
 .works__issue:hover .works__issue__outer {
   visibility: visible;
@@ -252,6 +318,11 @@ textarea {
   display: flex;
   justify-content: flex-end;
 }
+@media screen and (max-width: 800px) {
+  .header__intro {
+    justify-content: center;
+  }
+}
 .header__intro__content {
   flex-basis: 45%;
   display: flex;
@@ -259,15 +330,37 @@ textarea {
   align-items: flex-start;
   flex-direction: column;
 }
+@media screen and (max-width: 800px) {
+  .header__intro__content {
+    flex-basis: 70%;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 600px) {
+  .header__intro__content {
+    flex-basis: 95%;
+  }
+}
 .header__intro__title {
   font-size: 38px;
   margin-bottom: 30px;
+}
+@media screen and (max-width: 800px) {
+  .header__intro__title {
+    text-align: center;
+    font-size: 30px;
+  }
 }
 .header__intro__text {
   font-size: 18px;
   font-family: "Nunito Sans";
   line-height: 28px;
   margin-bottom: 40px;
+}
+@media screen and (max-width: 800px) {
+  .header__intro__text {
+    text-align: center;
+  }
 }
 
 .about-us {
@@ -294,8 +387,38 @@ textarea {
   background-position: right top;
   background-image: url("../images/backgrounds/2.jpg");
 }
+@media screen and (max-width: 900px) {
+  .skills {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../images/backgrounds/media.jpg");
+  }
+}
+@media screen and (max-width: 600px) {
+  .skills {
+    padding: 100px 0;
+  }
+}
+@media screen and (max-width: 400px) {
+  .skills {
+    padding: 70px 0;
+  }
+}
 .skills__inner {
   width: 35%;
+}
+@media screen and (max-width: 900px) {
+  .skills__inner {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 600px) {
+  .skills__inner {
+    width: 60%;
+  }
 }
 .skills__inner__title {
   font-size: 25px;
@@ -352,6 +475,11 @@ textarea {
   background-color: #10c9c3;
   width: 65%;
 }
+@media screen and (max-width: 900px) {
+  .skills__inner__stat {
+    background-color: #a5a5a5;
+  }
+}
 
 .load-more {
   background-color: #d8d8d8;
@@ -386,6 +514,12 @@ textarea {
   background-color: #d8d8d8;
   position: relative;
 }
+@media screen and (max-width: 550px) {
+  .work-process__inner__video {
+    width: 100%;
+    padding-top: 75%;
+  }
+}
 .work-process__inner__playicon {
   position: absolute;
   top: 50%;
@@ -409,6 +543,22 @@ textarea {
 .services__inner__issue:nth-last-child(-n+4) {
   margin-top: 60px;
 }
+@media screen and (max-width: 900px) {
+  .services__inner__issue {
+    flex-basis: 50%;
+  }
+  .services__inner__issue:nth-last-child(-n+4), .services__inner__issue:nth-child(3), .services__inner__issue:nth-child(4) {
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .services__inner__issue {
+    flex-basis: 100%;
+  }
+  .services__inner__issue:nth-child(2) {
+    margin-top: 40px;
+  }
+}
 .services__inner__title {
   text-transform: uppercase;
   font-size: 12px;
@@ -420,6 +570,11 @@ textarea {
   font-family: "Nunito Sans";
   padding: 0 35px;
   margin-top: 25px;
+}
+@media screen and (max-width: 900px) {
+  .services__inner__text {
+    padding: 0 15px;
+  }
 }
 
 .reviews {
@@ -476,11 +631,37 @@ textarea {
 }
 .firms__inner {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+@media screen and (max-width: 450px) {
+  .firms__inner {
+    justify-content: space-around;
+  }
 }
 .firms__inner__issue {
   flex-basis: 20%;
   position: relative;
   padding-top: 6%;
+}
+@media screen and (max-width: 800px) {
+  .firms__inner__issue {
+    flex-basis: 30%;
+    padding-top: 10%;
+  }
+  .firms__inner__issue:nth-last-child(-n+2) {
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .firms__inner__issue {
+    padding-top: 15%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .firms__inner__issue {
+    padding-top: 20%;
+  }
 }
 .firms__inner__image {
   position: absolute;

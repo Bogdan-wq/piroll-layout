@@ -88,18 +88,67 @@ textarea {
   padding: 100px 0;
   background-color: #10c9c3;
 }
+@media screen and (max-width: 900px) {
+  .achievements {
+    padding: 50px 0;
+  }
+}
 .achievements__inner {
   display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 900px) {
+  .achievements__inner {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 500px) {
+  .achievements__inner {
+    flex-direction: column;
+  }
 }
 .achievements__inner__issue {
   flex-basis: 25%;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 900px) {
+  .achievements__inner__issue {
+    flex-basis: 50%;
+    margin-top: 15px;
+  }
+  .achievements__inner__issue:nth-child(odd) {
+    justify-content: flex-end;
+    padding-right: 20px;
+  }
+  .achievements__inner__issue:nth-child(even) {
+    padding-left: 20px;
+    justify-content: flex-start;
+  }
+}
+@media screen and (max-width: 500px) {
+  .achievements__inner__issue:not(:first-child) {
+    margin-top: 40px;
+  }
+  .achievements__inner__issue:nth-child(odd) {
+    justify-content: flex-start;
+    padding-right: 0px;
+  }
+  .achievements__inner__issue:nth-child(even) {
+    padding-left: 0px;
+    justify-content: flex-start;
+  }
+}
+.achievements__inner__image {
+  width: 40px;
+  height: 36px;
+  margin-left: 0;
 }
 .achievements__inner__multiply-labeles {
   display: flex;
   flex-direction: column;
-  margin-left: 20px;
+  padding-left: 20px;
 }
 .achievements__inner__label {
   color: white;
@@ -110,6 +159,11 @@ textarea {
 }
 .achievements__inner__label:nth-child(2n) {
   margin-top: 2px;
+}
+@media screen and (max-width: 1100px) {
+  .achievements__inner__label:nth-child(2n) {
+    font-size: 13px;
+  }
 }
 
 .footer {

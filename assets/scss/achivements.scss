@@ -1,21 +1,66 @@
 .achievements {
   padding:100px 0;
   background-color:$main-color;
+  @media screen and (max-width: 900px) {
+   padding:50px 0;
+  }
+
 
 
   &__inner {
     display:flex;
+    flex-wrap: wrap;
+    @media screen and (max-width: 900px) {
+      justify-content: center;
+    }
+    @media screen and (max-width: 500px) {
+      flex-direction: column;
+    }
 
     &__issue {
       flex-basis: 25%;
       display: flex;
       justify-content: center;
+      align-items: center;
+      @media screen and (max-width: 900px) {
+        flex-basis: 50%;
+        margin-top:15px;
+        &:nth-child(odd) {
+          justify-content: flex-end;
+          padding-right:20px;
+        }
+        &:nth-child(even) {
+          padding-left:20px;
+          justify-content: flex-start;
+        }
+      }
+
+      @media screen and (max-width: 500px) {
+        &:not(:first-child) {
+          margin-top:40px;
+        }
+        &:nth-child(odd) {
+          justify-content: flex-start;
+          padding-right:0px;
+        }
+        &:nth-child(even) {
+          padding-left:0px;
+          justify-content: flex-start;
+        }
+      }
+    }
+
+
+    &__image {
+      width:40px;
+      height:36px;
+      margin-left: 0;
     }
 
     &__multiply-labeles {
       display: flex;
       flex-direction: column;
-      margin-left:20px;
+      padding-left:20px;
     }
 
     &__label {
@@ -26,6 +71,9 @@
       }
       &:nth-child(2n) {
         margin-top: 2px;
+        @media screen and (max-width: 1100px) {
+          font-size: 13px;
+        }
       }
     }
   }
