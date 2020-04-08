@@ -9,6 +9,10 @@
   background-color: $secondary-gray-light;
   position: relative;
 
+  @media screen and (max-width: 850px) {
+    padding-top:0px;
+  }
+
   &__background {
     position:absolute;
     z-index:0;
@@ -16,11 +20,26 @@
     top:0;
     bottom:0;
     width:50%;
-    @include background(center,url("../images/backgrounds/5.jpg"))
+    @include background(center,url("../images/backgrounds/5.jpg"));
+    @media screen and (max-width: 850px) {
+      position: static;
+      height:40vh;
+      width:100%;
+    }
+    @media screen and (max-height: 450px) {
+      height:60vh;
+    }
   }
 
   &__inner {
     width:50%;
+    @media screen and (max-width: 950px) {
+        width:55%;
+    }
+    @media screen and (max-width: 850px) {
+      width:100%;
+      margin-top:20px;
+    }
     &__text {
       margin-top:20px;
     }
@@ -29,6 +48,9 @@
       padding-right:100px;
       &:nth-child(2) {
         margin-top:20px;
+      }
+      @media screen and (max-width: 850px) {
+        padding-right:0;
       }
     }
     &__example {

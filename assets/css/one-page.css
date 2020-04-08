@@ -169,38 +169,55 @@ textarea {
 .footer {
   padding: 100px 0;
   background-color: black;
+  color: white;
 }
 .footer__inner {
   display: flex;
-  color: white;
+  flex-wrap: wrap;
 }
 .footer__inner__info {
   display: flex;
   flex-direction: column;
 }
-.footer__inner__info:not(:last-child) {
+.footer__inner__info:not(:last-child), .footer__inner__info:not(:first-child) {
   flex-grow: 1;
 }
 .footer__inner__info:nth-child(2) {
-  flex-grow: 5;
+  align-items: center;
+  font-style: normal;
 }
-.footer__inner__info:nth-child(4) {
-  flex-grow: 4;
+.footer__inner__info:first-child {
+  flex-basis: 25%;
+}
+.footer__inner__info:first-child, .footer__inner__info:last-child {
+  flex-grow: 0;
+}
+@media screen and (max-width: 800px) {
+  .footer__inner__info:nth-child(-n+2) {
+    flex-basis: 50%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .footer__inner__info:nth-child(-n+2) {
+    flex-basis: 100%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .footer__inner__info:nth-child(2) {
+    margin-top: 30px;
+    align-items: flex-start;
+  }
+}
+@media screen and (max-width: 800px) {
+  .footer__inner__info:nth-last-child(-n+3) {
+    flex-grow: 0;
+    flex-basis: 33%;
+    margin-top: 50px;
+  }
 }
 .footer__inner__design {
   font-weight: 600;
-  font-size: 18px;
-}
-.footer__inner__rights {
-  margin-top: 35px;
-  font-family: "Nunito Sans";
-}
-.footer__inner__email, .footer__inner__tel {
-  font-style: normal;
-  font-family: "Nunito Sans";
-}
-.footer__inner__tel {
-  margin-top: 15px;
+  margin-bottom: 25px;
 }
 .footer__inner__nav__item {
   color: white;
@@ -265,6 +282,11 @@ textarea {
   display: flex;
   flex-wrap: wrap;
 }
+@media screen and (max-width: 700px) {
+  .form {
+    flex-direction: column;
+  }
+}
 .form__block {
   flex-grow: 1;
   margin-top: 2rem;
@@ -272,6 +294,12 @@ textarea {
 }
 .form__block:first-child {
   margin-right: 35px;
+}
+@media screen and (max-width: 700px) {
+  .form__block:first-child {
+    margin-right: 0px;
+    margin-bottom: 2rem;
+  }
 }
 .form__block:nth-child(-n+2) {
   margin-top: 0;
@@ -307,6 +335,11 @@ textarea {
   background-repeat: no-repeat;
   background-position: left;
   background-image: url("../images/backgrounds/1.jpg");
+}
+@media screen and (max-height: 650px) {
+  .header {
+    height: 120vh;
+  }
 }
 .header__inner {
   height: 75vh;
@@ -389,8 +422,6 @@ textarea {
 }
 @media screen and (max-width: 900px) {
   .skills {
-    background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
     background-image: url("../images/backgrounds/media.jpg");
   }
@@ -585,8 +616,6 @@ textarea {
 .slider__item {
   color: white;
   text-align: center;
-  width: 100%;
-  margin: 0 auto;
 }
 .slider__item__text {
   font-size: 24px;
@@ -606,12 +635,13 @@ textarea {
   margin-top: 75px;
   display: flex;
   justify-content: center;
+  padding-left: 0;
 }
 .slick-dots li {
   list-style: none;
   margin-left: 10px;
 }
-.slick-dots li :first-child {
+.slick-dots li:first-child {
   margin-left: 0;
 }
 .slick-dots li button {
@@ -682,6 +712,11 @@ textarea {
   max-width: 660px;
   margin: 0 auto;
   text-align: center;
+}
+@media screen and (max-width: 700px) {
+  .need-a-project__inner {
+    max-width: 100%;
+  }
 }
 .need-a-project__inner__title {
   margin-bottom: 40px;

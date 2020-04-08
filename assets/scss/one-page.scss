@@ -25,6 +25,9 @@
 .header {
     height:75vh;
     @include background(left,url("../images/backgrounds/1.jpg"));
+    @media screen and (max-height: 650px){
+        height:120vh;
+    }
 
     &__inner {
         height:75vh;
@@ -34,7 +37,7 @@
 
 
 
-    &__intro  {
+    &__intro {
         flex-grow: 1;
         display: flex;
         justify-content: flex-end;
@@ -62,11 +65,11 @@
         }
 
         &__title {
-            font-size:38px;
+            font-size: 38px;
             margin-bottom: 30px;
             @media screen and (max-width: 800px) {
                 text-align: center;
-                font-size:30px;
+                font-size: 30px;
             }
         }
 
@@ -80,8 +83,6 @@
                 text-align: center;
             }
         }
-
-
     }
 }
 
@@ -130,7 +131,8 @@
     @include background(right top,url("../images/backgrounds/2.jpg"));
 
     @media screen and (max-width: 900px) {
-        @include background(center,url("../images/backgrounds/media.jpg"));
+        background-position: center;
+        background-image: url("../images/backgrounds/media.jpg");
     }
 
     @media screen and (max-width: 600px) {
@@ -326,8 +328,6 @@
     &__item {
         color: white;
         text-align: center;
-        width: 100%;
-        margin: 0 auto;
 
         &__text {
             font-size: 24px;
@@ -352,12 +352,13 @@
     margin-top:75px;
     display: flex;
     justify-content: center;
+    padding-left: 0;
 
     li {
         list-style: none;
         margin-left:10px;
 
-        :first-child {
+        &:first-child {
             margin-left:0;
         }
         button {
@@ -441,6 +442,9 @@
         max-width:660px;
         margin: 0 auto;
         text-align: center;
+        @media screen and (max-width:700px) {
+          max-width:100%;
+        }
 
         &__title {
             margin-bottom:40px;
