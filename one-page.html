@@ -19,15 +19,25 @@
                         <img src="assets/images/logo/logo.png">
                     </div>
 <!--                    Menu -->
-                    <nav class="nav">
-                        <a href="#" class="nav__item">Home</a>
-                        <a href="#" class="nav__item">About</a>
-                        <a href="#" class="nav__item">Work</a>
-                        <a href="#" class="nav__item">Process</a>
-                        <a href="#" class="nav__item">Services</a>
-                        <a href="#" class="nav__item">Testimonials</a>
-                        <a href="#" class="nav__item">Contact</a>
-                    </nav>
+                    <div class="burger">
+                        <div class="burger__menu" id="burgerJS" data-dropdown="true">
+                            <span class="burger__bar" data-dropdown="true"></span>
+                            <span class="burger__bar" data-dropdown="true"></span>
+                            <span class="burger__bar" data-dropdown="true"></span>
+                        </div>
+                        <div class="burger__content" id="burgerContentJS">
+                            <nav class="nav">
+                                <a href="./home.html" class="nav__item">Home</a>
+                                <a href="./about.html" class="nav__item">About</a>
+                                <a href="#work" class="nav__item">Work</a>
+                                <a href="#process" class="nav__item">Process</a>
+                                <a href="#services" class="nav__item">Services</a>
+                                <a href="#reviews" class="nav__item">Testimonials</a>
+                                <a href="./contact.html" class="nav__item">Contact</a>
+                            </nav>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="header__intro">
                     <div class="header__intro__content">
@@ -117,7 +127,7 @@
     </div>
 </div>
 <!--Works-->
-<div class="works">
+<div class="works" id="work">
     <div class="works__issue">
         <div class="works__issue__outer">
             <img src="assets/images/icons/eye.png">
@@ -150,7 +160,7 @@
     </div>
     <div class="works__issue">
         <div class="works__issue__outer">
-            <img src="assets/images/icons/eye.png"">
+            <img src="assets/images/icons/eye.png">
         </div>
         <img src="assets/images/works/6.jfif" class="works__issue__image">
     </div>
@@ -176,7 +186,7 @@
     </div>
 </div>
 <!--work-process-->
-<div class="work-process">
+<div class="work-process" id="process">
     <div class="container">
         <div class="work-process__inner">
             <h1 class="work-process__inner__title title">Our Work Process</h1>
@@ -190,7 +200,7 @@
     </div>
 </div>
 <!-- services -->
-<div class="services">
+<div class="services" id="services">
     <div class="container">
         <div class="services__inner">
             <div class="services__inner__issue">
@@ -246,7 +256,7 @@
 </div>
 
 <!--Reviews-->
-<div class="reviews">
+<div class="reviews" id="reviews">
     <div class="container">
         <div class="slider__inner">
             <div class="slider">
@@ -365,5 +375,7 @@
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="slick/slick.min.js"></script>
 <script src="slick/slider.js"></script>
+<script src="assets/javascript/anchor.js"></script>
+<script src="assets/javascript/burger.js"></script>
 </body>
 </html>
