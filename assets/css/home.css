@@ -156,7 +156,12 @@ textarea {
 }
 .burger__content {
   position: relative;
-  display: none;
+  display: block;
+}
+@media screen and (max-width: 800px) {
+  .burger__content {
+    display: none;
+  }
 }
 .burger__content.active {
   display: block;
